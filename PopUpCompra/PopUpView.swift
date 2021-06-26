@@ -19,7 +19,7 @@ struct PopUpView: View {
                 .fill(Color.accentColor)
                 .frame(width: 295, height: 370)
                 .accentColor(Color("popUpColor"))
-            
+                .shadow(color: .gray, radius: 10.0)
             VStack {
                 Spacer()
                     .frame(height:15)
@@ -31,11 +31,11 @@ struct PopUpView: View {
                     .padding(.bottom, 10)
                 
                 HStack {
-                Image("dracmaIcon")
-                Text(price)
-                    .font(.callout)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
+                    Image("dracmaIcon")
+                    Text(price)
+                        .font(.callout)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
                 }
                 
                 
@@ -44,20 +44,18 @@ struct PopUpView: View {
                     .fontWeight(.regular)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .frame(width: 255)
-                    .padding(.bottom, 15)
+                    .frame(width: 240)
                 
                 ZStack {
-                Button {
-                } label: {
-                    Text("Comprar")
-                        .frame(width: 143, height: 3)
-                        .padding(20)
-                        .font(.callout)
-                        .foregroundColor(.black)
-                        .background(Color.white)
-                        .cornerRadius(16)
-                    
+                    Button {
+                    } label: {
+                        Text("Comprar")
+                            .frame(width: 160, height: 40)
+                            .font(.callout)
+                            .foregroundColor(.black)
+                            .background(Color.white)
+                            .cornerRadius(16)
+                            .padding(.top, 15)
                     }
                 }
                 Spacer()
